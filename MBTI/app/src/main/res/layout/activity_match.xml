@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Match"
+    android:background="@color/primaryBackgroundColor">
+
+
+    <ImageView
+        android:id="@+id/initial_match_page_app_logo"
+        android:layout_width="151dp"
+        android:layout_height="179dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503"
+        app:srcCompat="@drawable/unimate_logo" />
+
+    <Button
+        android:id="@+id/go_see_match_result_button"
+        android:layout_width="150dp"
+        android:layout_height="47dp"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="284dp"
+        android:onClick="matchButtonClick"
+        android:text="매칭하기"
+        android:textStyle="bold"
+        app:backgroundTint="@color/buttonColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <Button
+        android:id="@+id/go_see_saved_match_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="410dp"
+        android:onClick="openSavedMatchResults"
+        android:text="이전 매칭 결과 불러오기"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/buttonColor" />
+
+
+    <Button
+        android:id="@+id/go_search_profiles"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="485dp"
+        android:onClick="openSearchProfile"
+        android:text="프로필 검색하기"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/buttonColor" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/colorPrimary"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
